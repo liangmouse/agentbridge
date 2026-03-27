@@ -1,0 +1,36 @@
+{
+  "name": "agentbridge",
+  "version": "0.1.0",
+  "description": "Cross-agent conversation sync tool - share conversation history between Claude Code, OpenCode, and Codex",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "agentbridge": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": ["ai", "agent", "claude-code", "opencode", "codex", "conversation-sync"],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.32.1",
+  "pnpm": {
+    "onlyBuiltDependencies": ["better-sqlite3", "esbuild"]
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^25.5.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.2"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.8.0",
+    "chalk": "^5.6.2",
+    "chokidar": "^5.0.0",
+    "commander": "^14.0.3"
+  }
+}
